@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block pagetitle %}Campus Placement{% endblock pagetitle %}
+
+{% block homescript %}{% endblock homescript %}
+
+{% block homecss %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/form.css' %}">
+{% endblock homecss %}
+
+
+{% block navbarbutton %}
+<li class="nav-item mr-2">
+    <a class="navlink btn btn-outline-light" href="/logout" >Logout</a>
+</li>
+
+{% endblock navbarbutton %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-4">
+                <div class="jumbotron">
+                    <h1>Someone is already loggedin in this device. <br> Please Logout First and then Create New Account.</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+    
+
+{% block footerc %}
+<div class="footer-copyright text-center py-4">© 2023 Copyright:
+      <a href="#">{{user.email}}</a>
+  </div>
+{% endblock footerc %}
